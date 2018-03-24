@@ -1,0 +1,35 @@
+{
+  "name": "miningweb",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.0",
+    "query-string": "^5.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-loadable": "^5.3.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "react-table": "^6.7.6",
+    "rxjs": "^5.5.6",
+    "spectre.css": "^0.5.1"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.2"
+  },
+  "proxy": "http://localhost:8000",
+  "homepage": "http://mywebsite.com/mining"
+}
